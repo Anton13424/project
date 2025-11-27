@@ -1,10 +1,8 @@
-
+// Переключение вкладок
 document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
-        
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
         document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-        
         
         tab.classList.add('active');
         document.getElementById(tab.dataset.tab).classList.add('active');
@@ -37,26 +35,21 @@ openBtn.addEventListener('click', () => {
             result.style.color = '#f44336';
         }
         
-        
         openBtn.disabled = true;
     }, 1500);
 });
 
 resetBtn.addEventListener('click', () => {
-    
     lid.classList.remove('open');
-    
     
     setTimeout(() => {
         cat.textContent = '😺';
         result.textContent = 'Кот находится в суперпозиции - одновременно и жив, и мёртв.';
         result.style.color = '#fff';
         
-        
         openBtn.disabled = false;
     }, 500);
 });
-
 
 let lastTouchEnd = 0;
 document.addEventListener('touchend', function (event) {

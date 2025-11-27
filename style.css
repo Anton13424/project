@@ -73,7 +73,7 @@ h1 {
     display: block;
 }
 
-
+/* первая вкладка */
 .experiment-container {
     display: flex;
     flex-direction: column;
@@ -105,9 +105,9 @@ h1 {
 .lid {
     position: absolute;
     width: 100%;
-    height: 50px;
+    height: 100%;
     background: linear-gradient(145deg, #5d4037, #6d4c41);
-    border-radius: 15px 15px 0 0;
+    border-radius: 15px;
     top: 0;
     left: 0;
     transform-origin: top center;
@@ -116,7 +116,8 @@ h1 {
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 20px;
 }
 
 .lid-handle {
@@ -186,6 +187,7 @@ button:disabled {
     line-height: 1.4;
 }
 
+/* вторая вкладжа пошла*/
 .theory-container {
     display: flex;
     flex-direction: column;
@@ -260,7 +262,7 @@ footer {
     line-height: 1.4;
 }
 
-
+/* тэлэфончэки */
 @media (max-width: 480px) {
     h1 {
         font-size: 1.8rem;
@@ -282,10 +284,6 @@ footer {
     
     .cat {
         font-size: 60px;
-    }
-    
-    .lid {
-        height: 40px;
     }
     
     .result {
@@ -322,7 +320,7 @@ footer {
     }
 }
 
-
+/* планшэтэки*/
 @media (min-width: 769px) and (max-width: 1024px) {
     .box-container {
         width: 280px;
@@ -332,14 +330,4 @@ footer {
     .cat {
         font-size: 90px;
     }
-}
-
-
-.no-select {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
